@@ -1,0 +1,34 @@
+class Config():
+    DEBUG = False
+    SQLITE_DB_DIR = None
+    SQLALCHEMY_DATABASE_URI = None
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    CELERY_BROKER_URL="redis://localhost:6379/1"
+    CELERY_RESULT_BACKEND="redis://localhost:6379/2"
+    CACHE_TYPE ="RedisCache"
+    CACHE_REDIS_HOST="localhost"
+    CACHE_REDIS_PORT=6379
+
+
+class DevelopmentConfig(Config):
+    PREFERRED_URL_SCHEME = 'http'
+    # SERVER_NAME = '127.0.0.1:5000'
+    APPLICATION_ROOT = '/'
+    
+    DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///dev.db'
+    SECRET_KEY = "thisissecter"
+    SECURITY_PASSWORD_SALT = "thisissaltt"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SECURITY_PASSWORD_HASH = "bcrypt"
+    SECURITY_REGISTERABLE = True
+    SECURITY_CONFIRMABLE = False
+    SECURITY_SEND_REGISTER_EMAIL = False
+    SECURITY_USERNAME_ENABLE=True
+    SECURITY_USERNAME_REQUIRED=True
+    SECURITY_TOKEN_AUTHENTICATION_HEADER = 'Authentication-Token'
+    CACHE_TYPE = "RedisCache"
+    CACHE_REDIS_HOST = "localhost"
+    CACHE_REDIS_PORT = 6379
+    CACHE_REDIS_DB = 3
+    WTF_CSRF_ENABLED = False

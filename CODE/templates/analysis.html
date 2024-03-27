@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div >
+        <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80px;
+          background-color: #333;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          margin-bottom: 6px;
+        "
+      >
+        <div style="font-size: 24px; font-weight: bold; color: #fff">ANALYSIS</div>
+      </div>
+      <!--  -->
+      <div class="cont d-flex flex-wrap justify-content-between my-3" style="display: flex; flex-wrap: wrap;">
+        <div
+          class="card rounded mx-2 my-2 border-success border-success"
+          style="width: 48%"
+        >
+          <div class="card-header display-1 text-center text-white bg-success">
+            Pie Chart <br />by Category
+          </div>
+          <img
+            src='static/pchart_category.png'
+            alt="pchart category"
+            class="card-img-top mx-auto d-block shadow"
+          />
+        </div>
+      
+        <div class="card rounded mx-2 my-2 border-success" style="width: 48%">
+          <div class="card-header display-1 text-center text-white bg-success">
+            Pie Chart <br />by Items
+          </div>
+          <img
+            src="static/pchart_items.png"
+            alt="pchart items"
+            class="card-img-top mx-auto d-block shadow"
+          />
+        </div>
+        <div class="card rounded mx-2 my-2 border-success" style="width: 48%">
+          <div class="card-header display-1 text-center text-white bg-success">
+            Daily <br />Sales
+          </div>
+          <img
+            src="/static/daily_sales.png"
+            alt="daily sales"
+            class="card-img-top mx-auto d-block shadow"
+          />
+        </div>
+      
+        <div class="card rounded mx-2 my-2 border-success" style="width: 48%">
+          <div class="card-header display-1 text-center text-white bg-success">
+            Cumulative <br />Revenue
+          </div>
+          <img
+            src="/static/cumulative_revenue.png"
+            alt="cumulative revenue"
+            class="card-img-top mx-auto d-block shadow"
+          />
+        </div>
+      </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+openapi: 3.0.0
+info:
+  title: MY Grocery Store v2
+  version: 1.0.0
+  description: 
+    Student_Name: Abdul Ahad Rauf
+    rollNumber: 21f3002590@ds.study.iitm.ac.in
+paths:
+  /admin:
+    get:
+      summary: Admin operations
+      description: Get all the requests made by the store managers and users 
+      responses:
+        '200':
+          description: Successful operation
+    post:
+      summary: Admin operations
+        description: Take action on the requests made by the store managers and users 
+        responses:
+          '200':
+            description: Successful operation
+
+  /user:
+    get:
+      summary: User operations
+      description: See all Users
+      responses:
+        '200':
+          description: Successful operation
+
+  /loaddummy:
+    get:
+      summary: Load dummy data
+      description: Load dummy data into the application
+      responses:
+        '200':
+          description: Data loaded successfully
+
+  /categories:
+    get:
+      summary: Retrieve categories
+      description: Get a list of all categories
+      responses:
+        '200':
+          description: List of categories
+    post:
+      summary: Add a new category
+      description: Create a new category in the system
+      responses:
+        '201':
+          description: Category created
+    put:
+      summary: update a new category
+      description: make request to update a new category in the system
+      responses:
+        '201':
+          description: Category created 
+    delete:
+      summary: delete a new category
+      description: make request to delte category in the system
+      responses:
+        '201':
+          description: Category created  
+
+  /categories/{category_id}:
+    get:
+      summary: Retrieve a specific category
+      description: Get details of a specific category
+      responses:
+        '200':
+          description: Details of the category
+
+  /products:
+    get:
+      summary: Retrieve products
+      description: Get a list of all products
+      responses:
+        '200':
+          description: List of products
+    post:
+      summary: Add a new product
+      description: Create a new product in the system
+      responses:
+        '201':
+          description: Product created
+
+  /products/{product_id}:
+    get:
+      summary: Retrieve a specific product
+      description: Get details of a specific product
+      responses:
+        '200':
+          description: Details of the product
+
+  /checkout:
+    post:
+      summary: Checkout operation
+      description: Perform a checkout operation
+      responses:
+        '200':
+          description: Checkout successful
+
+  /cart:
+    get:
+      summary: Retrieve cart items
+      description: Get items in the user's cart
+      responses:
+        '200':
+          description: List of cart items
+
+  /api/me:
+    get:
+      summary: User confidential data
+      description: Get confidential data of the current user
+      responses:
+        '200':
+          description: Confidential data of the user
+
+  /search:
+    get:
+      summary: Search functionality
+      description: Perform a search operation
+      responses:
+        '200':
+          description: Search results
+
+  /search/{search_string}:
+    get:
+      summary: Search with a string
+      description: Perform a search with a specific string
+      responses:
+        '200':
+          description: Search results for the string
+
+  /user_login:
+    post:
+      summary: User login
+      description: Login operation for a user
+      responses:
+        '200':
+          description: User logged in successfully
+
+  /user_logout:
+    post:
+      summary: User logout
+      description: Logout operation for a user
+      responses:
+        '200':
+          description: User logged out successfully
+
+  /BecomeStoreManger:
+    post:
+      summary: Become a store manager
+      description: Send a request to become a store manager
+      responses:
+        '200':
+          description: Request sent successfully
+
+  /user/{creator_id}/products:
+    get:
+      summary: User's products
+      description: Retrieve products created by a specific user
+      responses:
+        '200':
+          description: List of user's products
+
+  /user/{creator_id}/categories:
+    get:
+      summary: User's categories
+      description: Retrieve categories created by a specific user
+      responses:
+        '200':
+          description: List of user's categories
